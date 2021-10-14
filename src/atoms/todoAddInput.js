@@ -10,6 +10,6 @@ const StyledTodoAddInput = styled.input`
   border-bottom: 2px solid #e91e63;
 `;
 
-export const TodoAddInput = () => {
-  return <StyledTodoAddInput></StyledTodoAddInput>;
+export const TodoAddInput = (props) => {
+  return <StyledTodoAddInput { ...props }></StyledTodoAddInput>;
 };

@@ -11,16 +11,14 @@ const StyledTodoAddContainer = styled.div`
   align-items: center;
 `;
 
-export const TodoAddContainer = () => {
-  const [items, setItems] = useState(data);
+export const TodoAddContainer = ({ add }) => {
   const [inputValue, setInputValue] = useState("");
   const handleAddTodo = () => {
     const newItem = {
-      text: "dupa",
+      text: inputValue,
       isDone: false,
     };
-    setItems([...items, newItem]);
-    console.log(items);
+    add(newItem)
   };
   return (
     <StyledTodoAddContainer>
